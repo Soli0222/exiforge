@@ -1,15 +1,17 @@
 # Picture Arrange
 
-このGoプログラムは、写真のEXIF日付情報を抽出し、撮影日ごとにフォルダに整理します。JPGやDNGなど、さまざまなファイル形式に対応しており、指定したディレクトリ内のすべてのファイルを処理することができます。
+[日本語版 README はこちら](README-ja.md)
 
-## 特徴
+This Go program extracts EXIF date information from photos and organizes them into folders by date. It supports various file formats such as JPG and DNG and can process all files within a specified directory.
 
-- 写真のEXIFデータから日付情報を抽出
-- 写真を日付ごとのフォルダに整理
-- 複数のファイル拡張子に対応（例: JPG, DNG, PNG）
-- 進捗バーで処理状況を表示
+## Features
 
-たとえば、整理前のフォルダが以下のようになっているとします。
+- Extracts date information from photo EXIF data
+- Organizes photos into folders by date
+- Supports multiple file extensions (e.g., JPG, DNG, PNG)
+- Displays processing status with a progress bar
+
+For example, if your folder looks like this before organization:
 
 ```
 /photos
@@ -22,10 +24,13 @@
     ├── DSC_1234.DNG //2024-08-31
     └── vacation_2024.JPG //2024-08-30
 ```
-これに対して、以下のようなコマンドを使うと、このように整理されます。
+
+Using the following command will organize it like this:
+
 ```bash
 ./picture-arrange -dir="/photos"
 ```
+
 ```
 /photos
     ├── JPG
@@ -45,60 +50,60 @@
             └── IMG_0003.DNG
 ```
 
-## インストール
+## Installation
 
-ビルドされたバイナリを使用することで、ソースコードをビルドせずにプログラムを実行できます。
+You can run the program using the pre-built binary without needing to build the source code.
 
-1. [リリースページ](https://github.com/Soli0222/picture-arrange/releases)からお使いのOSに対応した最新バイナリをダウンロードします。
-2. ダウンロードしたバイナリを展開し、実行可能にします（必要に応じて権限を変更）。
+1. Download the latest binary for your OS from the [releases page](https://github.com/Soli0222/picture-arrange/releases).
+2. Extract the downloaded binary and make it executable (if necessary).
 
    ```bash
    chmod +x picture-arrange
    ```
 
-3. パスの通ったディレクトリに移動するか、直接コマンドとして使用します。
+3. Move it to a directory in your PATH or use it directly as a command.
 
-## 使用方法
+## Usage
 
-ダウンロードしたバイナリをコマンドラインから以下のオプションを指定して実行します:
+Run the downloaded binary from the command line with the following options:
 
-- `-ext`: 処理するファイル拡張子をカンマ区切りで指定します（デフォルトは `JPG,DNG`）。
-- `-dir`: 処理するディレクトリを指定します（デフォルトはカレントディレクトリ）。
+- `-ext`: Specify file extensions to process, separated by commas (default is `JPG,DNG`).
+- `-dir`: Specify the directory to process (default is the current directory).
 
-### 使用例
+### Examples
 
-1. **デフォルトの拡張子でカレントディレクトリ内の写真を整理する:**
+1. **Organize photos in the current directory with default extensions:**
 
    ```bash
    ./picture-arrange
    ```
 
-2. **特定のディレクトリ内の写真を整理し、PNGファイルを処理する:**
+2. **Organize photos in a specific directory and process PNG files:**
 
    ```bash
    ./picture-arrange -dir="/path/to/photos" -ext="PNG"
    ```
 
-3. **カレントディレクトリ内のJPGとPNGファイルを整理する:**
+3. **Organize JPG and PNG files in the current directory:**
 
    ```bash
    ./picture-arrange -ext="JPG,PNG"
    ```
 
-## 動作概要
+## How It Works
 
-1. プログラムは指定したディレクトリ内で、指定された拡張子に一致するファイルをスキャンします。
-2. 各ファイルのEXIFメタデータからオリジナルの日付を抽出します。
-3. ファイルは日付ごとのフォルダ（例: `2024-08-31`）に移動されます。
-4. 進捗バーで処理状況が表示されます。
+1. The program scans the specified directory for files matching the specified extensions.
+2. It extracts the original date from each file's EXIF metadata.
+3. Files are moved into folders by date (e.g., `2024-08-31`).
+4. The progress is displayed with a progress bar.
 
-## 依存関係
+## Dependencies
 
-このプロジェクトでは以下のGoパッケージを使用しています:
+This project uses the following Go packages:
 
-- [`github.com/rwcarlsen/goexif/exif`](https://pkg.go.dev/github.com/rwcarlsen/goexif) - 画像ファイルのEXIFメタデータを読み取るためのライブラリ
-- [`github.com/schollz/progressbar/v3`](https://pkg.go.dev/github.com/schollz/progressbar/v3) - ファイル処理中に進捗バーを表示するためのライブラリ
+- [`github.com/rwcarlsen/goexif/exif`](https://pkg.go.dev/github.com/rwcarlsen/goexif) - Library for reading EXIF metadata from image files
+- [`github.com/schollz/progressbar/v3`](https://pkg.go.dev/github.com/schollz/progressbar/v3) - Library for displaying a progress bar during file processing
 
-## ライセンス
+## License
 
-このプロジェクトはMITライセンスの下で公開されています。詳細については [LICENSE](LICENSE) ファイルをご覧ください。
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
