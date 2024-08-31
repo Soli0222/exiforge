@@ -101,4 +101,4 @@
 
 ## ライセンス
 
-このプロジェクトはMITライセンスの下で公開されています。詳細については [LICENSE](https://github.com/Soli0222/picture-arrange/LICENSE) ファイルをご覧ください。
+このプロジェクトはMITライセンスの下で公開されています。詳細については [LICENSE](LICENSE) ファイルをご覧ください。
