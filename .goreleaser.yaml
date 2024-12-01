@@ -22,6 +22,7 @@ builds:
       - linux
       - windows
       - darwin
+    binary: picture-arrange
 
 archives:
   - format: tar.gz
@@ -37,7 +38,8 @@ archives:
     format_overrides:
       - goos: windows
         format: zip
-
+    files:
+      - nothing*
 changelog:
   sort: asc
   filters:
