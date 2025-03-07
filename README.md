@@ -1,4 +1,4 @@
-# Picture Arrange
+# Exiforge
 
 [日本語版 README はこちら](README-ja.md)
 
@@ -29,7 +29,7 @@ For example, if your folder looks like this before organization:
 Using the following command will organize it like this:
 
 ```bash
-picture-arrange -d="/photos"
+exiforge -d="/photos"
 ```
 
 ```
@@ -54,7 +54,7 @@ picture-arrange -d="/photos"
 When organizing by camera model, use the following command:
 
 ```bash
-picture-arrange -d="/photos" -m
+exiforge -d="/photos" -m
 ```
 
 ```
@@ -84,11 +84,11 @@ picture-arrange -d="/photos" -m
 
 You can run the program using the pre-built binary without needing to build the source code.
 
-1. Download the latest binary for your OS from the [releases page](https://github.com/Soli0222/picture-arrange/releases).
+1. Download the latest binary for your OS from the [releases page](https://github.com/Soli0222/exiforge/releases).
 2. Extract the downloaded binary and make it executable (if necessary).
 
    ```bash
-   chmod +x picture-arrange
+   chmod +x exiforge
    ```
 
 3. Move it to a directory in your PATH or use it directly as a command.
@@ -107,31 +107,31 @@ Run the downloaded binary from the command line with the following options:
 1. **Organize photos in the current directory with default extensions:**
 
    ```bash
-   picture-arrange
+   exiforge
    ```
 
 2. **Organize photos in a specific directory and process RAF files:**
 
    ```bash
-   picture-arrange -d="/path/to/photos" -e="RAF"
+   exiforge -d="/path/to/photos" -e="RAF"
    ```
 
 3. **Organize JPG and RAF files in the current directory:**
 
    ```bash
-   picture-arrange -e="JPG,RAF"
+   exiforge -e="JPG,RAF"
    ```
 
 4. **Organize photos by camera model:**
 
    ```bash
-   picture-arrange -m
+   exiforge -m
    ```
 
 5. **Display version information:**
 
    ```bash
-   picture-arrange version
+   exiforge version
    ```
 
 ## How It Works

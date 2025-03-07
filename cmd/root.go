@@ -22,7 +22,7 @@ var (
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "picture-arrange",
+	Use:   "exiforge",
 	Short: "Organize pictures using EXIF data",
 	Long:  `Organize picture files by date and optionally by camera model based on EXIF metadata.`,
 	Run: func(cmd *cobra.Command, args []string) {

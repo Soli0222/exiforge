@@ -13,10 +13,10 @@ import (
 // versionCmd represents the version command
 var versionCmd = &cobra.Command{
 	Use:   "version",
-	Short: "Display the version of picture-arrange",
-	Long:  "This command displays the current version of the picture-arrange CLI tool.",
+	Short: "Display the version of exiforge",
+	Long:  "This command displays the current version of the exiforge CLI tool.",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("picture-arrange version v2.0.0", runtime.GOARCH)
+		fmt.Println("exiforge version v2.0.0", runtime.GOARCH)
 	},
 }
 

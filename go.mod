@@ -1,4 +1,4 @@
-module picture-arrange
+module exiforge
 
 go 1.22.5
 

@@ -22,7 +22,7 @@ builds:
       - linux
       - windows
       - darwin
-    binary: picture-arrange
+    binary: exiforge
 
 archives:
   - format: tar.gz

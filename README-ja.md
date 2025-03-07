@@ -1,4 +1,4 @@
-# Picture Arrange
+# Exiforge
 
 このGoプログラムは、写真のEXIF日付情報を抽出し、撮影日ごとにフォルダに整理します。JPGやARWなど、さまざまなファイル形式に対応しており、指定したディレクトリ内のすべてのファイルを処理することができます。
 
@@ -27,7 +27,7 @@
 これに対して、以下のようなコマンドを使うと、このように整理されます。
 
 ```bash
-picture-arrange -d="/photos"
+exiforge -d="/photos"
 ```
 
 ```
@@ -52,7 +52,7 @@ picture-arrange -d="/photos"
 カメラモデル別に整理する場合は、以下のようなコマンドを使います。
 
 ```bash
-picture-arrange -d="/photos" -m
+exiforge -d="/photos" -m
 ```
 
 ```
@@ -82,11 +82,11 @@ picture-arrange -d="/photos" -m
 
 ビルドされたバイナリを使用することで、ソースコードをビルドせずにプログラムを実行できます。
 
-1. [リリースページ](https://github.com/Soli0222/picture-arrange/releases)からお使いのOSに対応した最新バイナリをダウンロードします。
+1. [リリースページ](https://github.com/Soli0222/exiforge/releases)からお使いのOSに対応した最新バイナリをダウンロードします。
 2. ダウンロードしたバイナリを展開し、実行可能にします（必要に応じて権限を変更）。
 
    ```bash
-   chmod +x picture-arrange
+   chmod +x exiforge
    ```
 
 3. パスの通ったディレクトリに移動するか、直接コマンドとして使用します。
@@ -105,31 +105,31 @@ picture-arrange -d="/photos" -m
 1. **デフォルトの拡張子でカレントディレクトリ内の写真を整理する:**
 
    ```bash
-   picture-arrange
+   exiforge
    ```
 
 2. **特定のディレクトリ内の写真を整理し、RAFファイルを処理する:**
 
    ```bash
-   picture-arrange -d="/path/to/photos" -e="RAF"
+   exiforge -d="/path/to/photos" -e="RAF"
    ```
 
 3. **カレントディレクトリ内のJPGとRAFファイルを整理する:**
 
    ```bash
-   picture-arrange -e="JPG,RAF"
+   exiforge -e="JPG,RAF"
    ```
 
 4. **カメラモデル別に写真を整理する:**
 
    ```bash
-   picture-arrange -m
+   exiforge -m
    ```
 
 5. **バージョン情報を表示する:**
 
    ```bash
-   picture-arrange version
+   exiforge version
    ```
 
 ## 動作概要
