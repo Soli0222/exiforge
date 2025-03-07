@@ -3,4 +3,5 @@
 
 exiforge
 dist/
-test/
+
+coverage*

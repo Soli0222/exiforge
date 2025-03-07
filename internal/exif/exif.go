@@ -8,6 +8,12 @@ import (
 	"github.com/rwcarlsen/goexif/exif"
 )
 
+// ExifExtractor インターフェースはEXIFデータ抽出メソッドを定義します
+type ExifExtractor interface {
+	ExtractDate(filename string) (string, error)
+	ExtractModel(filename string) (string, error)
+}
+
 // Extractor handles EXIF metadata extraction
 type Extractor struct{}
 

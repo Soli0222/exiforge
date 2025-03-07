@@ -10,12 +10,6 @@ import (
 	"github.com/schollz/progressbar/v3"
 )
 
-// FileProcessor handles file organization based on EXIF
-type FileProcessor struct {
-	exifExtractor *exif.Extractor
-	logger        Logger
-}
-
 // Logger interface for dependency injection
 type Logger interface {
 	Printf(format string, v ...interface{})
@@ -27,8 +21,14 @@ type ProcessorOptions struct {
 	UseModel bool
 }
 
+// FileProcessor handles file organization based on EXIF
+type FileProcessor struct {
+	exifExtractor exif.ExifExtractor
+	logger        Logger
+}
+
 // NewFileProcessor creates a new file processor
-func NewFileProcessor(extractor *exif.Extractor, logger Logger) *FileProcessor {
+func NewFileProcessor(extractor exif.ExifExtractor, logger Logger) *FileProcessor {
 	return &FileProcessor{
 		exifExtractor: extractor,
 		logger:        logger,
