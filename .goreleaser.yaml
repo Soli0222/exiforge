@@ -52,4 +52,4 @@ brews:
   - repository:
       owner: Soli0222
       name: homebrew-exiforge
-      token: ${{ secrets.HOMEBREW_TOKEN }}
+      token: "{{ .Env.APP_TOKEN }}"
