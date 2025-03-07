@@ -22,7 +22,7 @@ builds:
       - linux
       - windows
       - darwin
-    binary: picture-arrange
+    binary: exiforge
 
 archives:
   - format: tar.gz
@@ -40,9 +40,16 @@ archives:
         format: zip
     files:
       - nothing*
+
 changelog:
   sort: asc
   filters:
     exclude:
       - "^docs:"
       - "^test:"
+
+brews:
+  - repository:
+      owner: Soli0222
+      name: homebrew-exiforge
+      token: ${{ secrets.HOMEBREW_TOKEN }}
