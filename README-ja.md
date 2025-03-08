@@ -80,6 +80,8 @@ exiforge -d="/photos" -m
 
 ## インストール
 
+### バイナリからのインストール
+
 ビルドされたバイナリを使用することで、ソースコードをビルドせずにプログラムを実行できます。
 
 1. [リリースページ](https://github.com/Soli0222/exiforge/releases)からお使いのOSに対応した最新バイナリをダウンロードします。
@@ -90,6 +92,17 @@ exiforge -d="/photos" -m
    ```
 
 3. パスの通ったディレクトリに移動するか、直接コマンドとして使用します。
+
+### Homebrewを使用したインストール（macOSまたはLinux）
+
+Homebrewパッケージマネージャーを使用して簡単にインストールすることもできます：
+
+```bash
+brew tap Soli0222/exiforge
+brew install Soli0222/exiforge/exiforge
+```
+
+これにより、自動的に最新バージョンがインストールされ、パスにも追加されます。
 
 ## 使用方法
 

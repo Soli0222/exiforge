@@ -82,6 +82,8 @@ exiforge -d="/photos" -m
 
 ## Installation
 
+### Using Pre-built Binary
+
 You can run the program using the pre-built binary without needing to build the source code.
 
 1. Download the latest binary for your OS from the [releases page](https://github.com/Soli0222/exiforge/releases).
@@ -92,6 +94,17 @@ You can run the program using the pre-built binary without needing to build the 
    ```
 
 3. Move it to a directory in your PATH or use it directly as a command.
+
+### Using Homebrew (macOS or Linux)
+
+You can also easily install using the Homebrew package manager:
+
+```bash
+brew tap Soli0222/exiforge
+brew install Soli0222/exiforge/exiforge
+```
+
+This will automatically install the latest version and add it to your path.
 
 ## Usage
 
